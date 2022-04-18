@@ -11,6 +11,8 @@ class BirthdaysViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    var results: Results?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -18,6 +20,11 @@ class BirthdaysViewController: UIViewController {
         tableView.dataSource = self
         
         tableView.register(UINib.init(nibName: "UserBirthdayTableViewCell", bundle: nil), forCellReuseIdentifier: "BirthdayCell")
+        
+        Networking.shared.getResults { res in
+            self.results = res
+            self.tableView.reloadData()
+        }
     }
 
 
@@ -26,14 +33,12 @@ class BirthdaysViewController: UIViewController {
 extension BirthdaysViewController: UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return results?.results?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "BirthdayCell", for: indexPath) as? UserBirthdayTableViewCell {
-            cell.initialsLabel.text = "RC"
-            cell.nameLabel.text = "renoy"
-            cell.DOBLabel.text = "13121991"
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "BirthdayCell", for: indexPath) as? UserBirthdayTableViewCell, let result = results?.results?[indexPath.item] {
+            cell.configureCell(result: result)
             return cell
         } else {
             return UITableViewCell()
