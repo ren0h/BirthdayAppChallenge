@@ -25,10 +25,11 @@ class UserBirthdayTableViewCell: UITableViewCell {
            let lastNameInitial = result.name?.last?.first,
            let name = result.name?.first,
            let lastName = result.name?.last,
-           let dob = result.dob?.date {
+           let dob = result.dob?.reformattedDate {
             initialsLabel.text = "\(nameInitial)\(lastNameInitial)"
             nameLabel.text = "\(name) \(lastName)"
             DOBLabel.text = "\(dob)"
+           
         }
         
         

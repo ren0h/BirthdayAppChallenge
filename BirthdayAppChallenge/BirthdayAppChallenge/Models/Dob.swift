@@ -14,8 +14,9 @@ struct Dob: Codable {
     var reformattedDate: String? {
         get {
             let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "dd-mm-yyyy"
+            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
             if let newDate = dateFormatter.date(from: date ?? "") {
+                dateFormatter.dateFormat = "dd-MM-yyyy"
                 return dateFormatter.string(from: newDate)
             } else {
                 return nil
