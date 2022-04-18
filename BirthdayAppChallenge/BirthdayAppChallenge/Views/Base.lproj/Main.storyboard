@@ -42,6 +42,7 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="KlF-Ka-qO8" id="SoT-9v-gff"/>
+                        <segue destination="uGi-Vk-yuv" kind="show" identifier="openDetail" id="hIX-oP-T3V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -51,7 +52,7 @@
         <!--Birthday Detail View Controller-->
         <scene sceneID="ek6-UA-akw">
             <objects>
-                <viewController id="uGi-Vk-yuv" customClass="BirthdayDetailViewController" customModule="BirthdayAppChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="uGi-Vk-yuv" customClass="BirthdayDetailViewController" customModule="BirthdayAppChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gJV-xW-clm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -118,6 +119,7 @@
                             <constraint firstItem="ak6-jm-YaK" firstAttribute="top" secondItem="RnO-kJ-1nV" secondAttribute="bottom" constant="40" id="uvf-jX-UQj"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="eNP-5J-bX2"/>
                     <connections>
                         <outlet property="ageLabel" destination="RnO-kJ-1nV" id="63L-fn-o5I"/>
                         <outlet property="firstNameLabel" destination="qCR-RA-YZi" id="dmL-SX-qM9"/>

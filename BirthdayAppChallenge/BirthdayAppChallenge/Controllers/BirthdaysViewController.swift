@@ -39,5 +39,9 @@ extension BirthdaysViewController: UITableViewDelegate, UITableViewDataSource, U
             return UITableViewCell()
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "openDetail", sender: self)
+    }
 }
     
