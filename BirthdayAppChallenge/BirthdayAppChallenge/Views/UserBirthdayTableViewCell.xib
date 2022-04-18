@@ -105,6 +105,12 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="DOBLabel" destination="ywl-WK-5QU" id="Ixo-74-mkD"/>
+                <outlet property="initialsLabel" destination="LzX-1H-SJt" id="4Ub-8t-ZBU"/>
+                <outlet property="initialsView" destination="y8A-it-jJX" id="Ahb-Va-EZP"/>
+                <outlet property="nameLabel" destination="zO0-kz-O1h" id="RTg-aa-eIu"/>
+            </connections>
             <point key="canvasLocation" x="213.768115942029" y="148.66071428571428"/>
         </tableViewCell>
     </objects>

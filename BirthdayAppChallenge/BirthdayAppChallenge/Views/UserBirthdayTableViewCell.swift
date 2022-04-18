@@ -9,15 +9,21 @@ import UIKit
 
 class UserBirthdayTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var initialsView: UIView!
+    @IBOutlet weak var initialsLabel: UILabel!
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var DOBLabel: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+       
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
     
 }
