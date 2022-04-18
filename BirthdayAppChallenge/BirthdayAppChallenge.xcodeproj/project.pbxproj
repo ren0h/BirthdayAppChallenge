@@ -18,6 +18,7 @@
 		D710B5E7280D9BE200825794 /* BirthdayAppChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D710B5E6280D9BE200825794 /* BirthdayAppChallengeUITestsLaunchTests.swift */; };
 		D710B5F6280D9CB800825794 /* UserBirthdayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D710B5F4280D9CB800825794 /* UserBirthdayTableViewCell.swift */; };
 		D710B5F7280D9CB800825794 /* UserBirthdayTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D710B5F5280D9CB800825794 /* UserBirthdayTableViewCell.xib */; };
+		D710B5F9280DA74A00825794 /* BirthdayDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D710B5F8280DA74A00825794 /* BirthdayDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		D710B5E6280D9BE200825794 /* BirthdayAppChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayAppChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D710B5F4280D9CB800825794 /* UserBirthdayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBirthdayTableViewCell.swift; sourceTree = "<group>"; };
 		D710B5F5280D9CB800825794 /* UserBirthdayTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserBirthdayTableViewCell.xib; sourceTree = "<group>"; };
+		D710B5F8280DA74A00825794 /* BirthdayDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				D710B5C3280D9BE000825794 /* AppDelegate.swift */,
 				D710B5C5280D9BE000825794 /* SceneDelegate.swift */,
 				D710B5C7280D9BE000825794 /* BirthdaysViewController.swift */,
+				D710B5F8280DA74A00825794 /* BirthdayDetailViewController.swift */,
 				D710B5F3280D9C8000825794 /* Views */,
 				D710B5CC280D9BE200825794 /* Assets.xcassets */,
 				D710B5CE280D9BE200825794 /* LaunchScreen.storyboard */,
@@ -277,6 +280,7 @@
 				D710B5C4280D9BE000825794 /* AppDelegate.swift in Sources */,
 				D710B5C6280D9BE000825794 /* SceneDelegate.swift in Sources */,
 				D710B5F6280D9CB800825794 /* UserBirthdayTableViewCell.swift in Sources */,
+				D710B5F9280DA74A00825794 /* BirthdayDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
