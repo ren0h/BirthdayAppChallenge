@@ -52,7 +52,7 @@
         <!--Birthday Detail View Controller-->
         <scene sceneID="ek6-UA-akw">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="uGi-Vk-yuv" customClass="BirthdayDetailViewController" customModule="BirthdayAppChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BirtdayDetail" modalPresentationStyle="fullScreen" id="uGi-Vk-yuv" customClass="BirthdayDetailViewController" customModule="BirthdayAppChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gJV-xW-clm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -75,20 +75,20 @@
                                     <constraint firstItem="atD-xr-Ztt" firstAttribute="centerX" secondItem="WEc-sn-0oN" secondAttribute="centerX" id="ugB-pb-a1b"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FirstName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCR-RA-YZi">
-                                <rect key="frame" x="20" y="248" width="374" height="60"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FirstName" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCR-RA-YZi">
+                                <rect key="frame" x="20" y="248" width="374" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age + years old" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RnO-kJ-1nV">
-                                <rect key="frame" x="20" y="328" width="374" height="30"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                <rect key="frame" x="20" y="304" width="374" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ak6-jm-YaK">
-                                <rect key="frame" x="20" y="398" width="374" height="52"/>
+                                <rect key="frame" x="20" y="362" width="374" height="52"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="9fl-c2-knD"/>
@@ -123,6 +123,8 @@
                     <connections>
                         <outlet property="ageLabel" destination="RnO-kJ-1nV" id="63L-fn-o5I"/>
                         <outlet property="firstNameLabel" destination="qCR-RA-YZi" id="dmL-SX-qM9"/>
+                        <outlet property="goBackButton" destination="ak6-jm-YaK" id="MUl-eh-PeH"/>
+                        <outlet property="initialsView" destination="WEc-sn-0oN" id="lwK-R3-NO6"/>
                         <outlet property="nameInitialLabel" destination="atD-xr-Ztt" id="RdR-RD-DAg"/>
                     </connections>
                 </viewController>

@@ -26,8 +26,11 @@ class BirthdaysViewController: UIViewController {
             self.tableView.reloadData()
         }
     }
-
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "openDetail", let vc = segue.destination as? BirthdayDetailViewController, let result = sender as? Result {
+            vc.result = result
+        }
+    }
 }
 
 extension BirthdaysViewController: UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate {
@@ -46,7 +49,10 @@ extension BirthdaysViewController: UITableViewDelegate, UITableViewDataSource, U
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "openDetail", sender: self)
+        if let result = results?.results?[indexPath.item] {
+            performSegue(withIdentifier: "openDetail", sender: result)
+        }
+        
     }
 }
     
